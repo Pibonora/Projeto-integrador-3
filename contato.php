@@ -26,7 +26,7 @@
     <input type="text" name="txtmensagem" id="email" placeholder="Digite sua mensagem" required/>
     </div>
     <div class="form-field submit-field" >
-    <input type="submit" class="vejamais" value="Enviar " id="btnEnviar"  onclick="return validar()"> 
+    <input type="submit" class="vejamais" value="Enviar " id="btnEnviar"> 
     </div>
   </form> 
 </div>

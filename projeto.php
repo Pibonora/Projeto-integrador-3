@@ -7,7 +7,7 @@
 </div>
 </div>
 <div class="container mid">
-    <div class="imagem">
+    <div class="imagem1">
         <img src="assets/plantar.jpg" alt="" class="fotinha">
     </div>
     <div class="conteudo">
@@ -63,11 +63,11 @@
     <div class="exibir">
         <?php
     include_once("conexao.php");
-    $consulta = mysqli_query($conexao," select sum(co2) as 'CO2', sum(litros) as 'Litros' from informacoes"); //executa a consulta sql
+    $consulta = mysqli_query($conexao," select round(sum(co2)) as 'CO2', sum(litros) as 'Litros' from informacoes"); //executa a consulta sql
     $linha = mysqli_fetch_assoc($consulta); //carrega a primeira linha
     ?>
-        <p> CO2 gerado pelos usuarios do site: <span class="linha"><br><?php  echo $linha['CO2'] ;?></span></p>
-        <p>Litros consumidos pelos usuarios do site:<span class="linha"> <br><?php  echo $linha['Litros'];?></span></p>
+        <p> CO₂ gerado pelos usuarios do site: <span class="linha"><br><?php  echo $linha['CO2'] ;?> kg</span></p>
+        <p>Litros consumidos pelos usuarios do site:<span class="linha"> <br><?php  echo $linha['Litros'];?> L</span></p>
     </div>
     <?php
     include_once "footer.php";
